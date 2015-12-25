@@ -1,5 +1,5 @@
 #FROM docker.taktik.be/odoo/ubuntu
-FROM github.com/rewasa/odoo-docker-images/ubuntu
+FROM tutum.co/rewasa/ubuntu
 
 MAINTAINER David Lefever <dl@taktik.be>
 
