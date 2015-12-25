@@ -1,4 +1,6 @@
-FROM docker.taktik.be/odoo/ubuntu
+#FROM docker.taktik.be/odoo/ubuntu
+FROM github.com/rewasa/odoo-docker-images/ubuntu
+
 MAINTAINER David Lefever <dl@taktik.be>
 
 # Sleep after chmod because of a bug: https://github.com/docker/docker/issues/9547
