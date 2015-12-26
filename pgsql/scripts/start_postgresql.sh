@@ -18,9 +18,9 @@ if [ ! "$(ls -A /var/lib/postgresql/9.3/main)" ]; then
 
     # Create openerp role
    # echo "[odoo] creating openerp role and database"
-   # su postgres -c "/usr/lib/postgresql/9.3/bin/postgres --single -c config-file=/etc/postgresql/9.3/main/postgresql.conf <<< 'CREATE USER openerp WITH CREATEDB NOCREATEUSER;'"
+    su postgres -c "/usr/lib/postgresql/9.3/bin/postgres --single -c config-file=/etc/postgresql/9.3/main/postgresql.conf <<< 'CREATE USER odoo WITH CREATEDB NOCREATEUSER;'"
     # Create openerp database
-   # su postgres -c "/usr/lib/postgresql/9.3/bin/postgres --single -c config-file=/etc/postgresql/9.3/main/postgresql.conf <<< 'CREATE DATABASE openerp WITH OWNER openerp;'"
+    su postgres -c "/usr/lib/postgresql/9.3/bin/postgres --single -c config-file=/etc/postgresql/9.3/main/postgresql.conf <<< 'CREATE DATABASE odoo WITH OWNER odoo;'"
     # Create replicator role
     su postgres -c "/usr/lib/postgresql/9.3/bin/postgres --single -c config-file=/etc/postgresql/9.3/main/postgresql.conf <<< 'CREATE USER replicator REPLICATION LOGIN;'"
     # Create collectd role
