@@ -17,10 +17,10 @@ if [ ! "$(ls -A /var/lib/postgresql/9.3/main)" ]; then
     su postgres -c "/usr/lib/postgresql/9.3/bin/initdb -E utf8 --locale=en_US.UTF-8 /var/lib/postgresql/9.3/main"
 
     # Create openerp role
-    echo "[odoo] creating openerp role and database"
-    su postgres -c "/usr/lib/postgresql/9.3/bin/postgres --single -c config-file=/etc/postgresql/9.3/main/postgresql.conf <<< 'CREATE USER openerp WITH CREATEDB NOCREATEUSER;'"
+   # echo "[odoo] creating openerp role and database"
+   # su postgres -c "/usr/lib/postgresql/9.3/bin/postgres --single -c config-file=/etc/postgresql/9.3/main/postgresql.conf <<< 'CREATE USER openerp WITH CREATEDB NOCREATEUSER;'"
     # Create openerp database
-    su postgres -c "/usr/lib/postgresql/9.3/bin/postgres --single -c config-file=/etc/postgresql/9.3/main/postgresql.conf <<< 'CREATE DATABASE openerp WITH OWNER openerp;'"
+   # su postgres -c "/usr/lib/postgresql/9.3/bin/postgres --single -c config-file=/etc/postgresql/9.3/main/postgresql.conf <<< 'CREATE DATABASE openerp WITH OWNER openerp;'"
     # Create replicator role
     su postgres -c "/usr/lib/postgresql/9.3/bin/postgres --single -c config-file=/etc/postgresql/9.3/main/postgresql.conf <<< 'CREATE USER replicator REPLICATION LOGIN;'"
     # Create collectd role
